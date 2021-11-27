@@ -21,16 +21,14 @@ namespace LinkedListHW
             Console.WriteLine(f1);
 
             // QUESTION 3
-            Node<int> a2 = new Node<int>(6);
-            Node<int> b2= new Node<int>(5, a2);
-            Node<int> c2 = new Node<int>(1, b2);
-            Node<int> d2 = new Node<int>(10, c2);
-            Node<int> e2 = new Node<int>(9, d2);
+            Node<int> a2 = new Node<int>(5);
+            Node<int> b2 = new Node<int>(3, a2);
+            Node<int> c2 = new Node<int>(2, b2);
+            Node<int> d2 = new Node<int>(1, c2);
 
-            // f: 9--->10--->1--->5--->6--->
-            Console.WriteLine(e2);
+            Console.WriteLine(d2);
 
-            Console.WriteLine(Sod(e2)); // 9 < 10 AND 1 < 5 AND
+            Console.WriteLine(Sod(d2));
 
             Console.ReadKey();
 
