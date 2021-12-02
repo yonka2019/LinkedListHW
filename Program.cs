@@ -21,17 +21,18 @@ namespace LinkedListHW
             Console.WriteLine(f1);
 
             // QUESTION 3
-            Node<int> list = createLinkedList(2, 2, 2, 2);
-            Console.WriteLine(list);
-            Console.WriteLine(Sod(list));
+            Node<int> listTrue = CreateLinkedList(1, 2, 1, 2); // 1 -> 2 -> 1 -> 2 (low, high, low, high) => true
+            Node<int> listFalse = CreateLinkedList(2, 1, 2, 1); // 2 -> 1 -> 2 -> 1 (high, low, high, low) => false
 
+            Console.WriteLine(Sod(listTrue));
+            Console.WriteLine(Sod(listFalse));
 
             Console.ReadKey();
 
 
 
         }
-        private static Node<T> createLinkedList<T>(params T[] numbers)
+        private static Node<T> CreateLinkedList<T>(params T[] numbers)
         {
             Node<T> linkedList = new Node<T>(numbers[numbers.Length - 1]); ;
 
