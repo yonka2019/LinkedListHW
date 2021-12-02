@@ -21,19 +21,26 @@ namespace LinkedListHW
             Console.WriteLine(f1);
 
             // QUESTION 3
-            Node<int> a2 = new Node<int>(5);
-            Node<int> b2 = new Node<int>(3, a2);
-            Node<int> c2 = new Node<int>(2, b2);
-            Node<int> d2 = new Node<int>(1, c2);
+            Node<int> list = createLinkedList(2, 2, 2, 2);
+            Console.WriteLine(list);
+            Console.WriteLine(Sod(list));
 
-            Console.WriteLine(d2);
-
-            Console.WriteLine(Sod(d2));
 
             Console.ReadKey();
 
 
 
+        }
+        private static Node<T> createLinkedList<T>(params T[] numbers)
+        {
+            Node<T> linkedList = new Node<T>(numbers[numbers.Length - 1]); ;
+
+            for (int i = numbers.Length - 2; i >= 0; i--)
+            {
+                linkedList = new Node<T>(numbers[i], linkedList);
+            }
+
+            return linkedList;
         }
 
         /// <summary>
@@ -94,14 +101,14 @@ namespace LinkedListHW
 
         }
         /// <summary>
-        /// Checks if in the two following number the first greater than the second
+        /// checks for each node, if the next node is greater or equals than the previous and next nodes
+        /// (low, high, low, high)
+        /// for example: 6, 9, 3, 6, 1, 4
         /// </summary>
         // טענת כניסה
         /// <param name="list">linked list to check</param>
         // טענת יציאה
-        /// <returns>True if the first number is greater than the second number in the two following numbers of the linked list</returns>
-        // linkedlist: a -> b - > c -> d -> f -> d
-        // return (a < b) && (c < d) && f < d
+        /// <returns>true if the next node is greater or equals than the previous and next nodes (low, high, low, high) either, false.</returns>
         public static bool Sod(Node<int> list)
         {
             Node<int> p = list;
