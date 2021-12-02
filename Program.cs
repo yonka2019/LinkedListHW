@@ -31,7 +31,7 @@ namespace LinkedListHW
         }
         private static Node<T> CreateLinkedList<T>(params T[] numbers)
         {
-            Node<T> linkedList = new Node<T>(numbers[numbers.Length - 1]); ;
+            Node<T> linkedList = new Node<T>(numbers[numbers.Length - 1]);
 
             for (int i = numbers.Length - 2; i >= 0; i--)
             {
