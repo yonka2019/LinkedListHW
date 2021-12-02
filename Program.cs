@@ -7,18 +7,14 @@ namespace LinkedListHW
         private static void Main()
         {
             //  QUESTION 2
-            Node<int> a1 = new Node<int>(5);
-            Node<int> b1 = new Node<int>(5, a1);
-            Node<int> c1 = new Node<int>(8, b1);
-            Node<int> d1 = new Node<int>(2, c1);
-            Node<int> e1 = new Node<int>(9, d1);
-            Node<int> f1 = new Node<int>(1, e1);
-            if (List10(f1))
+            Node<int> list = CreateLinkedList(1, 9, 2, 8, 5, 5);
+            Console.WriteLine(list);
+            if (List10(list))
             {
-                f1.InsertEnd(6);
-                f1.InsertEnd(4);
+                list.InsertEnd(6);
+                list.InsertEnd(4);
             }
-            Console.WriteLine(f1);
+            Console.WriteLine(list);
 
             // QUESTION 3
             Node<int> listTrue = CreateLinkedList(1, 2, 1, 2); // 1 -> 2 -> 1 -> 2 (low, high, low, high) => true

@@ -33,7 +33,7 @@
         public override string ToString()
         {
 
-            return this.value.ToString() + "--->" + next;
+            return this.value.ToString() + " --> " + next;
         }
         public bool HasNext()
         {
