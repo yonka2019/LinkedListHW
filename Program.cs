@@ -6,7 +6,7 @@ namespace LinkedListHW
     {
         private static void Main()
         {
-            //  QUESTION 2
+            // QUESTION 2
             Node<int> list = CreateLinkedList(1, 9, 2, 8, 5, 5);
             Console.WriteLine(list);
             if (List10(list))
